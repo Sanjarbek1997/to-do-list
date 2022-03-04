@@ -7,9 +7,10 @@ let todos = [];
 
 elForm.addEventListener("submit", function (e) {
   e.preventDefault();
-
   let inputValue = elInput.value.trim();
-
+  if (inputValue.length < 1) {
+    inputValue = "Akasi nimadir desangizchi!!!";
+  }
   let todo = {
     id: todos.length + 1,
     title: inputValue,
